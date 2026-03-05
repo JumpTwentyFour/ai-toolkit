@@ -2,6 +2,10 @@
 name: laravel-releases
 description: Audit recent Laravel framework releases against this codebase — surface new features, deprecations, and breaking changes worth adopting.
 allowed-tools: Read, Bash, Grep, Glob, AskUserQuestion, WebFetch, WebSearch, Task
+license: MIT
+metadata:
+  author: Jump24
+  tags: php, laravel, framework, releases, audit
 ---
 
 # Framework Release Audit
