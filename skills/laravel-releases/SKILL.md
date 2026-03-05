@@ -19,7 +19,7 @@ User provided: $ARGUMENTS
 ### Parsing the Input
 
 The user may provide:
-- **Nothing** — audit all releases since the last recorded audit
+- **Nothing** — ask the user how far back to audit
 - **A version range** — e.g. `v12.10 v12.20` or `from v12.10`
 - **A count** — e.g. `last 5` or `10 releases`
 - **A single version** — e.g. `v12.15` to audit just that release
