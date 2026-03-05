@@ -32,24 +32,13 @@ The user may provide:
 composer show laravel/framework --no-interaction | head -5
 ```
 
-### 1.2: Check the last audited version
-
-Read the audit state file if it exists:
-
-```
-$SKILL_DIR/last-audited.txt
-```
-
-This file contains a single line: the last framework version that was audited (e.g. `v12.21.0`). If the file doesn't exist, ask the user how far back to go.
-
-### 1.3: Determine the range
+### 1.2: Determine the range
 
 - If the user specified a range in `$ARGUMENTS`, use that
-- If `last-audited.txt` exists, audit from the version after that up to the installed version
-- If neither, ask the user:
+- Otherwise, ask the user:
   - "How far back should I audit?" with options: "Last 5 releases", "Last 10 releases", "Last 20 releases", "Specify a version"
 
-### 1.4: Fetch the release list
+### 1.3: Fetch the release list
 
 ```bash
 gh release list --repo laravel/framework --limit 100 --json tagName,publishedAt | jq -r '.[] | "\(.tagName) \(.publishedAt)"'
@@ -154,13 +143,7 @@ Actionable items:     X
 New capabilities:     X
 ```
 
-## Phase 5: Update Audit State
-
-After presenting the report, update the last-audited marker:
-
-Write the installed version to `$SKILL_DIR/last-audited.txt` so the next run knows where to pick up from.
-
-## Phase 6: Ask User
+## Phase 5: Ask User
 
 After presenting the report, ask the user:
 
