@@ -15,8 +15,11 @@ The goal of this repository is to:
 
 ## What You'll Find Here
 
-### Claude Skills
-Structured capabilities designed to help with common Laravel and PHP development tasks.
+### Skills
+
+| Skill | Description |
+|---|---|
+| [laravel-releases](skills/laravel-releases) | Audit recent Laravel framework releases against your codebase — surfaces new features, deprecations, and breaking changes worth adopting. |
 
 ### Agent Workflows
 AI-driven development flows for tasks such as feature scaffolding, refactoring, testing, and code review.
@@ -27,9 +30,19 @@ Reusable prompts optimised for our development practices.
 ### Development Utilities
 Tools and examples for integrating AI assistance into project workflows.
 
-## Usage
+## Installing Skills
 
-These tools are designed to support development across Jump24 repositories and are intended to complement our existing engineering standards and best practices.
+Install all skills:
+
+```bash
+npx skills add JumpTwentyFour/ai-toolkit --all
+```
+
+Install a specific skill:
+
+```bash
+npx skills add JumpTwentyFour/ai-toolkit --skill laravel-releases
+```
 
 ## About Jump24
 
