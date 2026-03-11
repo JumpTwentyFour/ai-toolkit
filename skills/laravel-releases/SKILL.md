@@ -40,7 +40,7 @@ composer show laravel/framework --no-interaction | head -5
 ### 1.3: Fetch the release list
 
 ```bash
-gh release list --repo laravel/framework --limit 100 --json tagName,publishedAt | jq -r '.[] | "\(.tagName) \(.publishedAt)"'
+gh release list --repo laravel/framework --limit 100 --json tagName,publishedAt --jq '.[] | "\(.tagName) \(.publishedAt)"'
 ```
 
 Filter this list to only the releases within the determined range.
